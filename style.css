@@ -1,13 +1,14 @@
 /*
 Theme Name: Clearision
 Theme URI: http://blog.dimpurr.com/Clearison
-Version: 1.3
+Version: 1.71
 Author: Dimpurr
 Author URI: http://dimpurr.com
 Description: A HTML5 grey and one column WordPress theme.
 Text Domain: clearision
 */
 
+/* 重置样式 */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {display:block;}
 audio,canvas,video {display:inline;zoom:1;}
 audio:not([controls]) {display:none;}
@@ -61,22 +62,23 @@ input:invalid,textarea:invalid {background-color:#f0dddd;}
 table {border-collapse:collapse;border-spacing:0;}
 td {vertical-align:top;}
 
-@font-face { font-family: Century Gothic; src: local('Century Gothic'), url(http://img1.cheny.org/cyfont/CenturyGothic.TTF) format('ttf');}
+/* 通用样式 */
 
 .round { -webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px; }
 .hide { display: none; }
 .box-shadow { -moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD; }
-.text-shadow { -moz-text-shadow: 0 0 10px #000; -webkit-text-shadow: 0 0 10px #000; text-shadow: 0 0 8px #000; }
+.text-shadow { text-shadow: 0 0 8px #000; }
 .opacity { filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity: 0.5; opacity: 0.5; }
 .blur { -webkit-filter: blur(2px); -moz-filter: blur(2px); -ms-filter: blur(2px); filter: blur(2px); }
 .linear { background: -webkit-linear-gradient(top, rgba(200,200,200,0.3), rgba(0,0,0,0.7));
 	background: -moz-linear-gradient(linear, top, from(rgba(255,255, 255,0.1)), to(rgba(255,255,255,0.9))); }
 
-body { background: #F5F5F5; color: #444; font-size: 15px; }
+/* 基本样式 */
 
+body { background: #F5F5F5; color: #444; font-size: 15px; }
 p { font-size: 15px; line-height: 28px; }
-a { text-decoration: none; color: #222; border-bottom: 1px dashed #BBB;
-	-webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
+a { text-decoration: none; color: #222; border-bottom: 1px dashed #BBB; }
+a { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 a:hover { color: #000; border-bottom: 1px dashed #666; }
 a:visited { color: #222 }
 blockquote , q { margin: 10px 30px 10px 50px; padding: 10px 5px;
@@ -104,13 +106,15 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 .wp-caption:hover { background: #F6F6F6; }
 .wp-caption-text { margin: 5px 0 0 0; }
 
+/* 基本布局 */
+
 #page { margin: 0 auto 0 auto; text-align: left; max-width: 1200px; }
 #float { width: 160px; float: left; position: fixed; top: 0; text-align: right; }
 #ctn , #link { margin-left: 200px; }
 #content { margin: 20px; }
 #footer { width: 160px; float: left; position: fixed; bottom: 0; text-align: right; }
 
-#wpadminbar a { border: 0; }
+/* 悬浮导航 */
 
 #float { padding-top: 40px; text-align: right; }
 #logo { width: 112px; background: #FFF; margin-bottom: 26px;
@@ -133,6 +137,8 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #next a { font-size: 15px; }
 #float a { border: 0; }
 
+/* 头部标题 */
+
 #ctn_header { margin: 70px 20px 70px 200px; }
 
 #title { float: left; text-align: left; }
@@ -146,8 +152,7 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #title_r input { width: 22px; height: 34px; border: 0; padding: 2px 8px; cursor: pointer;
 	background: url(img/search.png) no-repeat #FFF center; background-size: 18px;
 	-webkit-border-radius: 500px; -moz-border-radius: 500px; border-radius: 500px;
-	-moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD
-	border: 2px solid #DDD; }
+	-moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD; }
 #title_r input:hover { background: url(img/search.png) no-repeat #F9F9F9 center; background-size: 18px; }
 #title_r input:focus { width: 100px; height: 30px; padding: 2px 18px; vertical-align: middle;
 	background: #FAFAFA url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
@@ -156,9 +161,13 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
 	-moz-box-shadow: inset 0 0 0 #DDD; -webkit-box-shadow: inset 0 0 0 #DDD; box-shadow: inset 0 0 0 #DDD; }
 
+/* 内容容器 */
+
 #ctn , #link { background: #FFF; margin: 40px 20px 0 200px;
  -moz-box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px #DDD; }
 #content , #link_content { margin: 30px; padding: 30px 0; }
+
+/* 文章样式 */
 
 .post_ctn { border-top: 1px dashed #DDD; }
 .post_ctn .wp-caption { max-width: 100% !important; }
@@ -177,13 +186,14 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 	vertical-align: middle; }
 .post_ct a:after { content: " >"; }
 .post_h { display: inline; font-size: 24px; line-height: 32px; vertical-align: middle; font-weight: 600; }
-.post_tag { margin: 5px 0 5px 0; }
-.post_tag a , .post_c a { padding: 2px 5px; margin-right: 4px;
+.post_tag { margin: 5px 0 2px 0; }
+.post_tag a , .post_c a { display: inline-block; padding: 2px 5px; margin: 0 4px 4px 0;
 	font-size: 12px; border: 0; background: #EEE; color: #000;
 	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
 .post_tag a:hover { background: #DEDEDE; }
 .post_c a { background: #999; color: #FFF; }
 .post_c a:hover { background: #777; color: #FFF; }
+.wp-postviews { cursor: pointer; }
 .more-link { text-align: right; padding: 2px 5px; font-size: 14px; font-weight: normal;
 	background: #EEE; color: #000; border: 0;
 	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
@@ -200,19 +210,21 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #link_content { margin: 10px 30px; padding: 15px 0; }
 #link_h { vertical-align: middle; padding: 0; margin: 0;
 	font-size: 16px; line-height: 32px; }
-#link a { vertical-align: middle; padding: 0; margin: 0 15px 0 0; 
+#link a { vertical-align: middle; padding: 0; margin: 0 15px 0 0;
 	font-size: 14px; line-height: 32px; }
 
 #post_nav { margin: 0 0 30px 0; }
 #p_n_r { float: right; margin-left: 0; }
+
+/* 评论样式 */
 
 .comment , .comment li { list-style-type: none; }
 .cmt_list { margin: 0; margin-left: -70px; }
 .cmt_list li , .comment li { padding: 15px; margin: 0;
 	border-style: dashed; border-color: #DDD; border-width: 1px 0 0 0; }
 .comment .children { margin-bottom: 0; }
-.comment .children li { margin-left: -35px; margin-bottom: 15px;
-	border-style: dashed; border-color: #DDD; border-width: 1px 0 1px 0; }
+.comment .children li { margin-left: -35px; margin-bottom: 0;
+	border-style: dashed; border-color: #DDD; border-width: 1px 0 0 0; }
 .comment-content { font-size: 14px; line-height: 24px; }
 .comment-meta .avatar { float: left; margin-right: 15px; -moz-box-shadow:0 0 10px #DDD; -webkit-box-shadow:0 0 10px #DDD; box-shadow:0 0 10px #DDD; }
 .fn { font-weight: 600; font-style: normal; }
@@ -222,7 +234,7 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 .cmt_ua_a:hover { border: 0; }
 .cmt_ua_img { margin: 0 2px; width: 14px; }
 .cmt_ua_n { margin: 0 2px; font-size: 12px; }
-.comment-edit-link , .comment-reply-link { 
+.comment-edit-link , .comment-reply-link {
 	display: inline-block; margin: 0 5px 0 0; padding: 2px 6px; margin-right: 4px;
 	font-size: 12px; border: 0; background: #EEE; color: #000;
 	-webkit-transition: background linear 0.2s; -moz-transition: background linear 0.2s; transition: background linear 0.2s; }
@@ -244,6 +256,8 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #respond textarea { width: 91.7%; max-width: 666px; padding: 15px; margin-top: -10px; }
 #respond input[type="submit"] { min-width: 0; width: 80px; }
 
+/* 边栏样式 */
+
 #sidebar { margin: 0 5px 20px 200px; text-align: center; color: #555; font-size: 14px; }
 #sidebar a { color: #777; border-bottom: 1px dashed #BBB; }
 #sidebar a:hover { color: #000; border-bottom: 1px dashed #888; }
@@ -255,6 +269,8 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #two { text-align: right; }
 .tagcloud { margin-right: 20px; }
 
+/* 尾部样式 */
+
 #footer { margin-left: 20px; width: 140px; padding: 10px 0 10px 0; font-size: 13px; background: #F5F5F5; color: #CCC;
 	border-style: solid; border-color: #DDD; border-width: 1px 0 0 0; }
 #footer a { text-decoration: none; color: #BBB; }
@@ -265,7 +281,11 @@ input[type="text"]:hover , input[type="password"]:hover , textarea:hover , input
 #footer { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 #footer a { -webkit-transition: color linear 0.2s; -moz-transition: color linear 0.2s; transition: color linear 0.2s; }
 
+/* 移动适配 */
+
 @media screen and (max-width: 550px) {
+
+/* 基本样式布局 */
 
 * { float: none; }
 p { font-size: 14px; line-height: 26px; }
@@ -277,12 +297,16 @@ blockquote , q { margin-left: 15px; }
 #content , #link_content { margin: 0px; }
 #footer { width: auto; float: none; position: static; text-align: center; }
 
+/* 细节样式适配 */
+
 #logo { display: none; }
 
 #nav , #next { width: auto; float: none; }
 #next { padding-top: 2px; }
 #nav li { padding: 0 8px 0 0; margin: 8px 2px 8px 2px; display: inline-block; }
 #next li { padding: 0 8px 0 0; margin: 3px 2px 3px 2px; display: inline-block; }
+#nav li:hover , #next li:hover { padding-right: 8px; border: 0; }
+#nav li:active , #next li:active { position: static; padding-right: 8px; }
 #nav a { font-size: 16px; }
 #next a { font-size: 14px; }
 
@@ -292,18 +316,16 @@ blockquote , q { margin-left: 15px; }
 #site-description { font-size: 14px !important; margin: 0; }
 #title_r { text-align: center; }
 
-#title_r input , #title_r input:hover , #title_r input:focus { 
+#title_r input , #title_r input:hover , #title_r input:focus {
 	width: 180px; height: 20px; padding: 2px 18px; vertical-align: middle;
 	background: #FFF url(img/enter.png) right no-repeat; background-size: 12px; background-origin: content-box;
-	border-style: solid; border-width: 2px; border-color: #E7E7E7; cursor: text; 
+	border-style: solid; border-width: 2px; border-color: #E7E7E7; cursor: text;
 	-moz-box-shadow: inset 0 0 0 #DDD; -webkit-box-shadow: inset 0 0 0 #DDD; box-shadow: inset 0 0 0 #DDD; }
 
 #ctn { background: #FFF; margin: 0; }
 #content { margin: 15px; padding: 30px 0; }
 
 #link_content { margin: 15px; }
-
-.post_tag a { line-height: 28px; }
 
 #post_nav { margin: 0 0 30px 0; }
 .post_h_l { padding: 5px; }
@@ -314,14 +336,11 @@ blockquote , q { margin-left: 15px; }
 
 .comment .children li { margin-left: -55px; }
 .cmt_ua_n { display: none; }
-.cmt_ua_a { display: inline-block; }
 .cmt_ua_a:hover , .cmt_ua_a:hover .cmt_ua_n { display: inline; }
-.cmt_ua_img { display: inline-block; }
-
 
 #sidebar , .widget , #one , #two , .recentcomments , #recentcomments , #recentcomments li { position: static; float: none; width: auto; text-align: center; padding: 0; margin: 0; list-style: none; }
 #sidebar { margin-bottom: 20px; }
-#recentcomments li { font-size: 14px; line-height: 32px; }
+#recentcomments li { font-size: 14px; line-height: 30px; }
 
 #footer { float: none; margin: auto; padding: 10px 0; width: auto; text-align: center; }
 
